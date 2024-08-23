@@ -8,10 +8,10 @@ const bodyParser = require("body-parser");
 const controller = require("./app/controllers/formulaireControllers");
 // Connexion à la base de données (peut être déplacée dans le modèle si nécessaire)
 const optionBd = {
-  host: "mysql-asseko222.alwaysdata.net",
-  user: " asseko222_invite",
+  host: "mysql-asseko999.alwaysdata.net",
+  user: "asseko999",
   password: "asseko1999",
-  database: "asseko_inviter",
+  database: "asseko999_inviter",
 };
 
 app.use(connection(mysql, optionBd, "pool"));
@@ -32,4 +32,5 @@ app.use("/", indexRouter);
 app.listen(port, () => {
   console.log(`ASSEKO a lancé ${port}`);
 });
+
 app.post("/form", controller.handleFormPost);
