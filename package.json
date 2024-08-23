@@ -4,13 +4,14 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "dev": " app.js",
+    "type": "module",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.10",
+    "express": "^4.19.2",
     "express-myconnection": "^1.0.4",
     "mysql": "^2.18.1",
     "mysql2": "^3.11.0",
