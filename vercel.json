@@ -8,9 +8,9 @@
   ],
   "routes": [
     {
-      "src": "/old-route",
-      "dest": "/new-route",
-      "status": 301
+      "src": "/",
+      "dest": "/",
+      "status": 200
     }
   ]
 }

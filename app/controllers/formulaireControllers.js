@@ -1,27 +1,22 @@
-// controller.js
 const model = require("../models/formulaireModel");
 
 // Fonction pour traiter les requêtes POST
 function handleFormPost(req, res) {
-  let nom = req.body.nom;
-  let prenom = req.body.prenom;
-  let cotisation = req.body.cotisation;
-  let cadeau = req.body.cadeau;
-  let adresseMail = req.body.adresseMail;
+  const { nom, prenom, NumeroDeTelephone, Pays, adresseMail } = req.body;
 
   console.log("Requête reçue:", {
     nom,
     prenom,
-    cotisation,
-    cadeau,
+    NumeroDeTelephone,
+    Pays,
     adresseMail,
   });
 
   model.insertInviter(
     nom,
     prenom,
-    cotisation,
-    cadeau,
+    NumeroDeTelephone,
+    Pays,
     adresseMail,
     (erreur, resultat) => {
       if (erreur) {

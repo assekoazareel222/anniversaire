@@ -8,12 +8,20 @@ const pool = mysql.createPool({
   database: "asseko999_inviter",
 });
 
-function insertInviter(nom, prenom, cotisation, cadeau, adresseMail, callback) {
+function insertInviter(
+  nom,
+  prenom,
+  NumeroDeTelephone,
+  Pays,
+  adresseMail,
+  callback
+) {
   const query =
-    "INSERT INTO inviter (Nom, Prenom, Cotisation, cadeau, adresseMail) VALUES (?, ?, ?, ?, ?)";
+    "INSERT INTO inviter (Nom, Prenom, NumeroDeTelephone, Pays, adresseMail) VALUES (?, ?, ?, ?, ?)";
+
   pool.query(
     query,
-    [nom, prenom, cotisation, cadeau, adresseMail],
+    [nom, prenom, NumeroDeTelephone, Pays, adresseMail],
     (erreur, resultat) => {
       callback(erreur, resultat);
     }
