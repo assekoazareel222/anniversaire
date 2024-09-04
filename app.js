@@ -58,11 +58,11 @@ app.get("/", (req, res) => {
 
     // Ajouter les colonnes
     worksheet.columns = [
-      { header: "Nom", key: "nom", width: 30 },
-      { header: "Prénom", key: "prenom", width: 30 },
+      { header: "Nom", key: "Nom", width: 30 },
+      { header: "Prénom", key: "Prenom", width: 30 },
       { header: "Numéro de Téléphone", key: "NumeroDeTelephone", width: 20 },
-      { header: "Pays", key: "pays", width: 20 },
-      { header: "Adresse Email", key: "adresseMail", width: 30 },
+      { header: "Pays", key: "Pays", width: 20 },
+      { header: "Adresse Email", key: "AdresseMail", width: 30 },
     ];
 
     // Requête pour récupérer les données depuis la base de données
