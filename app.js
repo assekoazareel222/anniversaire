@@ -36,7 +36,7 @@ app.listen(port, () => {
 app.post("/", controller.handleFormPost);
 
 app.get("/", (req, res) => {
-  res.sendFile("index.html", {
+  res.render("index.ejs", {
     root: path.join(__dirname, "app/views"),
   });
   const ExcelJS = require("exceljs");
