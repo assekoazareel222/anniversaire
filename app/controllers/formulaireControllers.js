@@ -26,7 +26,7 @@ function handleFormPost(req, res) {
         });
       } else {
         console.log("Insertion réussie:", resultat);
-        return res.redirect("/");
+        return res.redirect("https://hismusicinstitute.com/formation/");
       }
     }
   );
